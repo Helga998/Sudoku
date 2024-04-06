@@ -1,15 +1,13 @@
 function read() {
-  /**
-   * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
-   */
+  return[
+    "I love you Helga OSOCHKINA"
+  ]
 }
 
 function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
-}
+    return askArrSolved;
+  return "URA IS FULISH"
+  }
 
 function isSolved() {
   /**
