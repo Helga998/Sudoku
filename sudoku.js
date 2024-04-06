@@ -5,8 +5,9 @@ function read() {
 }
 
 function solve() {
+    return askArrSolved;
   return "URA IS FULISH"
-}
+  }
 
 function isSolved() {
   /**
