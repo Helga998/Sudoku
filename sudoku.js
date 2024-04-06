@@ -13,10 +13,31 @@ function read() {
 }
 
 function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
+  const arr = read(num);
+  const askArrSolved = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    let etalon = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    askArrSolved[i] = arr[i]
+      .map((el) => {
+        if (el !== "-") {
+          etalon.splice(etalon.indexOf(el), 1);
+          return el;
+        } else {
+          return el;
+        }
+      })
+      .map((el) => {
+        if (el === "-") {
+          let index = Math.floor(Math.random() * etalon.length);
+          el = etalon[index];
+          etalon.splice(index, 1);
+          return el;
+        } else {
+          return el;
+        }
+      });
+  }
+  return askArrSolved;
 }
 
 function isSolved() {
