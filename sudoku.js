@@ -1,24 +1,15 @@
-function read(match) {
-  const fs = require("fs");
-  const { EOL } = require("os");
-  const puzzlesTxt = fs.readFileSync("./puzzles.txt", "utf-8");
-
-  //arrPuzzles - одномерный массивб каждый элемент это строка из puzzle.txt
-  const arrPuzzles = puzzlesTxt.split(EOL);
-
-  //arrSudoku - массив где каждый элемент это одно значение всего судоку (81 элемент)
-  let arrSudoku;
-  for (let i = 0; i <= arrPuzzles.length; i += 1) {
-    arrSudoku = arrPuzzles[match - 1].split("");
-    break;
-  }
-
-  //playngField - игровое поле, двумерный массив, где вложенные масивы это строки по 9 элементов
-  let playingField = [];
-  for (let i = 0; i < arrSudoku.length; i += 9) {
-    playingField.push(arrSudoku.slice(i, i + 9));
-  }
-  return playingField;
+function read() {
+  return[
+    ['-','8','6','-','1','9','4','2','7'],
+    ['-','2','-','7','-','-','9','-','-'],
+    ['-','7','-','-','5','-','-','8','3'],
+    ['7','-','-','-','6','-','5','9','8'],
+    ['-','-','8','9','-','-','-','-','-'],
+    ['-','9','1','-','-','5','7','-','-'],
+    ['-','6','-','5','-','3','8','7','1'],
+    ['-','-','-','-','-','-','3','-','9'],
+    ['4','3','7','1','-','8','-','5','-'],
+  ]
 }
 
 function solve() {
